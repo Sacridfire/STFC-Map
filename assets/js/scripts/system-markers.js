@@ -7,8 +7,8 @@ var greenIcon = L.icon({
 });
 
 var tooltipThreshold = 2;
-map.on('zoomend', function() {
-  if (map.getZoom() < tooltipThreshold) {
+mymap.on('zoomend', function() {
+  if (mymap.getZoom() < tooltipThreshold) {
       $(".leaflet-tooltip").css("display","none")
   } else { 
       $(".leaflet-tooltip").css("display","block")
