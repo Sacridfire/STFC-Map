@@ -2,7 +2,6 @@
 <head>
   <title>A Leaflet map!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="assets/js/leaflet/L.control.MousePosition.css"/>
   <script type="text/javascript" src="assets/js/leaflet/L.control.MousePosition.js"></script>
@@ -12,13 +11,7 @@
 </head>
 <body>
 	<div id="map"></div>
-	
-	  // initialize the map
-	var map = L.map('map', {crs: L.CRS.Simple, maxZoom:10, minZoom: -2}).setView([-4679,-426]);
-	var bounds = [[-2238,-2358], [1462,-6458]];
-	var image = L.imageOverlay('assets/baked-map.png', bounds).addTo(map);
-	map.fitBounds(bounds);
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"></script>	
 	<script type="text/javascript" src="assets/js/scripts/scripts.js"></script>
 	<script type="text/javascript" src="assets/js/scripts/system-markers.js"></script>
 </body>
