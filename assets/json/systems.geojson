@@ -2,7 +2,7 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "id": 2, "properties": { }, "geometry": { "type": "Point", "coordinates": [-5,-5047] } }
+{ "type": "Feature", "id": 1, "properties": { }, "geometry": { "type": "Point", "coordinates": [-4679,-426] } }
 
 ]
 }
