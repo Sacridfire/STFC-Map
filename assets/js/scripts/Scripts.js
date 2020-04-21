@@ -32,6 +32,10 @@
   });
 
     // load Federation Territory
+  $.getJSON("assets/json/fed-territory.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
 
   
     // load Augment Territory
