@@ -1,16 +1,19 @@
   // initialize the map
-	var map = L.map('map', {crs: L.CRS.Simple, maxZoom:10, minZoom: -2}).setView([-4679,-426]);
+	var map = L.map('map', {crs: L.CRS.Simple, maxZoom:10, minZoom:-2}).setView([-4679,-426]);
 	var bounds = [[-2238,-2358], [1462,-6458]];
 	var image = L.imageOverlay('assets/baked-map.png', bounds).addTo(map);
 	map.fitBounds(bounds);
 	
-	var tooltipThreshold = 2;
-		map.on('zoomend', function() {
-			if (map.getZoom() < tooltipThreshold) {
-			$(".leaflet-tooltip").css("display","none")
-			} else { 
-			$(".leaflet-tooltip").css("display","block")
-			}
+var lastZoom;
+var tooltipThreshold = 1;
+map.on('zoomend', function() {
+    var zoom = map.getZoom();
+    if (zoom < tooltipThreshold && (!lastZoom || lastZoom >= tooltipThreshold)) {
+        $(".leaflet-tooltip").css("display","none")
+    } else if (zoom >= tooltipThreshold && (!lastZoom || lastZoom < tooltipThreshold)) { 
+        $(".leaflet-tooltip").css("display","block")
+    }
+    lastZoom = zoom;
 });
 
     // load Travel Paths
