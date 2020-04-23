@@ -1,56 +1,107 @@
   // initialize the map
-	var map = L.map('map', {crs: L.CRS.Simple, maxZoom:10, minZoom:-2}).setView([-4679,-426]);
-	var bounds = [[-2238,-2358], [1462,-6458]];
-	var image = L.imageOverlay('assets/baked-map.png', bounds).addTo(map);
-	map.fitBounds(bounds);
-	
-var lastZoom;
-var tooltipThreshold = 1;
-map.on('zoomend', function() {
+  var base = L.tileLayer()
+
+  var map = L.map('map', {
+    crs: L.CRS.Simple,
+    center: [-4679, -426],
+    minZoom: -2,
+    maxZoom: 10
+  });
+  var bounds = [
+    [-2238, -2358],
+    [1462, -6458]
+  ];
+  var image = L.imageOverlay('assets/baked-map.png', bounds).addTo(map);
+  map.fitBounds(bounds);
+
+  var lastZoom;
+  var tooltipThreshold = 1;
+  map.on('zoomend', function() {
     var zoom = map.getZoom();
     if (zoom < tooltipThreshold && (!lastZoom || lastZoom >= tooltipThreshold)) {
-        $(".leaflet-tooltip").css("display","none")
-    } else if (zoom >= tooltipThreshold && (!lastZoom || lastZoom < tooltipThreshold)) { 
-        $(".leaflet-tooltip").css("display","block")
+      $(".leaflet-tooltip").css("display", "none")
+    } else if (zoom >= tooltipThreshold && (!lastZoom || lastZoom < tooltipThreshold)) {
+      $(".leaflet-tooltip").css("display", "block")
     }
     lastZoom = zoom;
-});
-
-    // load Travel Paths
-  $.getJSON("assets/json/travel-paths.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
-  
-    // load Klingon Territory
-  $.getJSON("assets/json/kli-territory.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
-  
-    // load Romulus Territory
-  $.getJSON("assets/json/rom-territory.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
   });
 
-    // load Federation Territory
-  $.getJSON("assets/json/fed-territory.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
+  // load Travel Paths
+  var paths = null
+  $.getJSON("assets/json/travel-paths.geojson", function(data) {
+    paths = L.geoJson(data).addTo(map);
   });
 
-  
-    // load Augment Territory
-  $.getJSON("assets/json/aug-territory.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
+  // load Klingon Territory
+  var kli = null
+  $.getJSON("assets/json/kli-territory.geojson", function(data) {
+    kli = L.geoJson(data, {
+      style: function(feature) {
+        return {
+          color: "red",
+          weight: 1,
+          fillColor: "red",
+          fillOpacity: .5
+        }
+      },
+    }).addTo(map);
   });
-  
-	// load system names
-  //$.getJSON("assets/json/systems.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    //L.geoJson(data).addTo(map);
-  //});
-  
+
+  // load Romulus Territory
+  var rom = null
+  $.getJSON("assets/json/rom-territory.geojson", function(data) {
+    rom = L.geoJson(data, {
+      style: function(feature) {
+        return {
+          color: "green",
+          weight: 1,
+          fillColor: "green",
+          fillOpacity: .5
+        }
+      },
+    }).addTo(map);
+  });
+
+  // load Federation Territory
+  var fed = null
+  $.getJSON("assets/json/fed-territory.geojson", function(data) {
+    fed = L.geoJson(data, {
+      style: function(feature) {
+        return {
+          color: "blue",
+          weight: 1,
+          fillColor: "blue",
+          fillOpacity: .5
+        }
+      },
+    }).addTo(map);
+  });
+
+  // load Augment Territory
+  var aug = null
+  $.getJSON("assets/json/aug-territory.geojson", function(data) {
+    aug = L.geoJson(data, {
+      style: function(feature) {
+        return {
+          color: "yellow",
+          weight: 1,
+          fillColor: "yellow",
+          fillOpacity: .5
+        }
+      },
+    }).addTo(map);
+  });
+
   L.control.mousePosition().addTo(map);
+
+  var baselayers = {
+    'Base': base
+  };
+  var overlays = {
+    'Travel Paths': paths,
+    'Klingon Territory': kli,
+    'Romulus Territory': rom,
+    'Federation Territory': fed,
+    'Augment Territory': aug
+  };
+  var controlLayers = L.control.layers(baselayers, overlays).addTo(map);

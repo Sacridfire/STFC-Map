@@ -1,6 +1,7 @@
 #map {
-    background: black;
+  background: black;
 }
+
 .leaflet-tooltip {
   display: none;
 }
