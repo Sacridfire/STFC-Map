@@ -92,16 +92,27 @@
     }).addTo(map);
   });
 
+  var zone1part1 = L.circle([-426, -4679], {
+    color: 'gray',
+    fillColor: 'gray',
+    fillOpacity: 0.5,
+    radius: 65
+});
+  var zone1part2 = L.circle([-486, -4672], {
+    color: 'gray',
+    fillColor: 'gray',
+    fillOpacity: 0.5,
+    radius: 30
+});
+  var zone1 = L.layerGroup([zone1part1, zone1part2]);
+  
   L.control.mousePosition().addTo(map);
 
+  //Remove this after layercontrols.js is finished
   var baselayers = {
     'Base': base
   };
   var overlays = {
-    'Travel Paths': paths,
-    'Klingon Territory': kli,
-    'Romulus Territory': rom,
-    'Federation Territory': fed,
-    'Augment Territory': aug
+	'zone1': zone1
   };
-  var controlLayers = L.control.layers(baselayers, overlays).addTo(map);
+  var controlLayers = L.control.layers(null, overlays).addTo(map);

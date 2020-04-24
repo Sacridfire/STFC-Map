@@ -27,6 +27,15 @@ L.marker([-1477,-5826], {icon: systemIcon}).bindTooltip("Aker",{permanent: true}
 L.marker([-1544,-5718], {icon: systemIcon}).bindTooltip("Winber",{permanent: true}).addTo(map);
 L.marker([-1729,-5889], {icon: systemIcon}).bindTooltip("Worhundelja",{permanent: true}).addTo(map);
 L.marker([-1506,-5621], {icon: systemIcon}).bindTooltip("Takik",{permanent: true}).addTo(map);
+L.marker([-1666,-5362], {icon: systemIcon}).bindTooltip("Murasaki 312",{permanent: true}).addTo(map);
+L.marker([-918,-5579], {icon: systemIcon}).bindTooltip("Maluria",{permanent: true}).addTo(map);
+L.marker([-802,-5856], {icon: systemIcon}).bindTooltip("Ruli",{permanent: true}).addTo(map);
+L.marker([-854,-5935], {icon: systemIcon}).bindTooltip("Flok",{permanent: true}).addTo(map);
+L.marker([-727,-6133], {icon: systemIcon}).bindTooltip("Eravan",{permanent: true}).addTo(map);
+L.marker([-917,-5912], {icon: systemIcon}).bindTooltip("Baw",{permanent: true}).addTo(map);
+L.marker([-1010,-5920], {icon: systemIcon}).bindTooltip("Hosun",{permanent: true}).addTo(map);
+L.marker([-1156,-6020], {icon: systemIcon}).bindTooltip("Jinnia",{permanent: true}).addTo(map);
+L.marker([-1000,-5760], {icon: systemIcon}).bindTooltip("Laurgatt",{permanent: true}).addTo(map);
 //Clusters
 //Kepler-018
 L.marker([-426,-4679], {icon: systemIcon}).bindTooltip("Kepler-018",{permanent: true}).addTo(map);
@@ -91,3 +100,37 @@ L.marker([-1543,-5888], {icon: systemIcon}).bindTooltip("Vawur",{permanent: true
 L.marker([-1620,-5518], {icon: systemIcon}).bindTooltip("Melllvar",{permanent: true}).addTo(map);
 L.marker([-1556,-5518], {icon: systemIcon}).bindTooltip("Lanoitan",{permanent: true}).addTo(map);
 L.marker([-1503,-5528], {icon: systemIcon}).bindTooltip("Gomes",{permanent: true}).addTo(map);
+//Mayagrazi
+L.marker([-696,-5834], {icon: systemIcon}).bindTooltip("Mayagrazi",{permanent: true}).addTo(map);
+L.marker([-718,-5871], {icon: systemIcon}).bindTooltip("Alorina",{permanent: true}).addTo(map);
+L.marker([-657,-5838], {icon: systemIcon}).bindTooltip("Beyven",{permanent: true}).addTo(map);
+L.marker([-687,-5802], {icon: systemIcon}).bindTooltip("Didi",{permanent: true}).addTo(map);
+//Iora
+L.marker([-745,-5923], {icon: systemIcon}).bindTooltip("Iora",{permanent: true}).addTo(map);
+L.marker([-689,-5951], {icon: systemIcon}).bindTooltip("Quirad",{permanent: true}).addTo(map);
+L.marker([-729,-5987], {icon: systemIcon}).bindTooltip("Pimo",{permanent: true}).addTo(map);
+L.marker([-779,-5957], {icon: systemIcon}).bindTooltip("Sido",{permanent: true}).addTo(map);
+//Sverlov
+L.marker([-883,-6039], {icon: systemIcon}).bindTooltip("Sverlov",{permanent: true}).addTo(map);
+L.marker([-826,-6070], {icon: systemIcon}).bindTooltip("Skelg",{permanent: true}).addTo(map);
+L.marker([-863,-6101], {icon: systemIcon}).bindTooltip("Vemarii",{permanent: true}).addTo(map);
+L.marker([-919,-6065], {icon: systemIcon}).bindTooltip("Saqua",{permanent: true}).addTo(map);
+//Jobe
+L.marker([-995,-6032], {icon: systemIcon}).bindTooltip("Jobe",{permanent: true}).addTo(map);
+L.marker([-974,-6089], {icon: systemIcon}).bindTooltip("Feer",{permanent: true}).addTo(map);
+L.marker([-1035,-6108], {icon: systemIcon}).bindTooltip("Kerao",{permanent: true}).addTo(map);
+L.marker([-1049,-6010], {icon: systemIcon}).bindTooltip("Lyquan",{permanent: true}).addTo(map);
+//Falko
+L.marker([-1067,-5817], {icon: systemIcon}).bindTooltip("Falko",{permanent: true}).addTo(map);
+L.marker([-1096,-5882], {icon: systemIcon}).bindTooltip("Wuver",{permanent: true}).addTo(map);
+L.marker([-1136,-5829], {icon: systemIcon}).bindTooltip("Muhen",{permanent: true}).addTo(map);
+L.marker([-1116,-5768], {icon: systemIcon}).bindTooltip("Khic",{permanent: true}).addTo(map);
+//Cymon
+L.marker([-1044,-5684], {icon: systemIcon}).bindTooltip("Cymon",{permanent: true}).addTo(map);
+L.marker([-1074,-5729], {icon: systemIcon}).bindTooltip("Maq",{permanent: true}).addTo(map);
+L.marker([-1107,-5691], {icon: systemIcon}).bindTooltip("Jeybriol",{permanent: true}).addTo(map);
+L.marker([-1068,-5649], {icon: systemIcon}).bindTooltip("Donnel",{permanent: true}).addTo(map);
+
+
+
+//Add each cluster to a group, add all individual systems to a group, add layer groups, add layer control
