@@ -2,7 +2,6 @@
     'Base': base
   };
   var overlays = {
-	'System Markers': systems
-	'zone1': zone1
+	'Zone 1': Kepler
   };
   var controlLayers = L.control.layers(null, overlays).addTo(map);

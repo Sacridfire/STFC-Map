@@ -92,27 +92,12 @@
     }).addTo(map);
   });
 
-  var zone1part1 = L.circle([-426, -4679], {
+  var zone1 = L.circle([-426, -4679], {
     color: 'gray',
-    fillColor: 'gray',
+    fillColor: 'white',
     fillOpacity: 0.5,
     radius: 65
 });
-  var zone1part2 = L.circle([-486, -4672], {
-    color: 'gray',
-    fillColor: 'gray',
-    fillOpacity: 0.5,
-    radius: 30
-});
-  var zone1 = L.layerGroup([zone1part1, zone1part2]);
+  var zone1 = L.layerGroup([zone1]);
   
   L.control.mousePosition().addTo(map);
-
-  //Remove this after layercontrols.js is finished
-  var baselayers = {
-    'Base': base
-  };
-  var overlays = {
-	'zone1': zone1
-  };
-  var controlLayers = L.control.layers(null, overlays).addTo(map);

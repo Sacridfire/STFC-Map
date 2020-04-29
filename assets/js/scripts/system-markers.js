@@ -5,6 +5,9 @@ var systemIcon = L.icon({
     iconAnchor:   [4, 4], // point of the icon which will correspond to marker's location
     popupAnchor:  [4, 4] // point from which the popup should open relative to the iconAnchor
 });
+
+//L.marker([], {icon: systemIcon}).bindTooltip("",{permanent: true}).addTo(map);
+
 //Individuals
 L.marker([-494,-4732], {icon: systemIcon}).bindTooltip("Kaikara",{permanent: true}).addTo(map);
 L.marker([-550,-4785], {icon: systemIcon}).bindTooltip("Deneva",{permanent: true}).addTo(map);
@@ -36,6 +39,14 @@ L.marker([-917,-5912], {icon: systemIcon}).bindTooltip("Baw",{permanent: true}).
 L.marker([-1010,-5920], {icon: systemIcon}).bindTooltip("Hosun",{permanent: true}).addTo(map);
 L.marker([-1156,-6020], {icon: systemIcon}).bindTooltip("Jinnia",{permanent: true}).addTo(map);
 L.marker([-1000,-5760], {icon: systemIcon}).bindTooltip("Laurgatt",{permanent: true}).addTo(map);
+L.marker([-612,-5573], {icon: systemIcon}).bindTooltip("Risa",{permanent: true}).addTo(map);
+L.marker([-596,-5662], {icon: systemIcon}).bindTooltip("Zukerat",{permanent: true}).addTo(map);
+L.marker([-527,-5692], {icon: systemIcon}).bindTooltip("Melvara",{permanent: true}).addTo(map);
+L.marker([-452,-5841], {icon: systemIcon}).bindTooltip("Volta",{permanent: true}).addTo(map);
+L.marker([-482,-5637], {icon: systemIcon}).bindTooltip("Benzi",{permanent: true}).addTo(map);
+L.marker([-499,-5566], {icon: systemIcon}).bindTooltip("Yuvaa",{permanent: true}).addTo(map);
+L.marker([-345,-5562], {icon: systemIcon}).bindTooltip("Eral",{permanent: true}).addTo(map);
+L.marker([-533,-5498], {icon: systemIcon}).bindTooltip("Estrada",{permanent: true}).addTo(map);
 //Clusters
 //Kepler-018
 L.marker([-426,-4679], {icon: systemIcon}).bindTooltip("Kepler-018",{permanent: true}).addTo(map);
@@ -47,6 +58,12 @@ L.marker([-462,-4668], {icon: systemIcon}).bindTooltip("Eizeb",{permanent: true}
 L.marker([-455,-4650], {icon: systemIcon}).bindTooltip("Aciben",{permanent: true}).addTo(map);
 L.marker([-441,-4619], {icon: systemIcon}).bindTooltip("Bubeau",{permanent: true}).addTo(map);
 L.marker([-430,-4632], {icon: systemIcon}).bindTooltip("Eisenhorn",{permanent: true}).addTo(map);
+  var Kepler = L.circle([-426, -4679], {
+    color: 'gray',
+    fillColor: 'white',
+    fillOpacity: 0.5,
+    radius: 65
+});
 //Amador
 L.marker([-546,-4673], {icon: systemIcon}).bindTooltip("Amador",{permanent: true}).addTo(map);
 L.marker([-523,-4683], {icon: systemIcon}).bindTooltip("Rakkaus",{permanent: true}).addTo(map);
@@ -96,7 +113,7 @@ L.marker([-1643,-5713], {icon: systemIcon}).bindTooltip("New Sligo",{permanent: 
 L.marker([-1689,-5638], {icon: systemIcon}).bindTooltip("Lotch",{permanent: true}).addTo(map);
 L.marker([-1649,-5584], {icon: systemIcon}).bindTooltip("Orkon",{permanent: true}).addTo(map);
 //Vawur
-L.marker([-1543,-5888], {icon: systemIcon}).bindTooltip("Vawur",{permanent: true}).addTo(map);
+L.marker([-1543,-5558], {icon: systemIcon}).bindTooltip("Vawur",{permanent: true}).addTo(map);
 L.marker([-1620,-5518], {icon: systemIcon}).bindTooltip("Melllvar",{permanent: true}).addTo(map);
 L.marker([-1556,-5518], {icon: systemIcon}).bindTooltip("Lanoitan",{permanent: true}).addTo(map);
 L.marker([-1503,-5528], {icon: systemIcon}).bindTooltip("Gomes",{permanent: true}).addTo(map);
@@ -130,6 +147,92 @@ L.marker([-1044,-5684], {icon: systemIcon}).bindTooltip("Cymon",{permanent: true
 L.marker([-1074,-5729], {icon: systemIcon}).bindTooltip("Maq",{permanent: true}).addTo(map);
 L.marker([-1107,-5691], {icon: systemIcon}).bindTooltip("Jeybriol",{permanent: true}).addTo(map);
 L.marker([-1068,-5649], {icon: systemIcon}).bindTooltip("Donnel",{permanent: true}).addTo(map);
+//Bodex
+L.marker([-647,-5657], {icon: systemIcon}).bindTooltip("Bodex",{permanent: true}).addTo(map);
+L.marker([-636,-5700], {icon: systemIcon}).bindTooltip("Reelah",{permanent: true}).addTo(map);
+L.marker([-670,-5680], {icon: systemIcon}).bindTooltip("Slawlor",{permanent: true}).addTo(map);
+L.marker([-686,-5640], {icon: systemIcon}).bindTooltip("Boorhi",{permanent: true}).addTo(map);
+//Toshen
+L.marker([-575,-5721], {icon: systemIcon}).bindTooltip("Toshen",{permanent: true}).addTo(map);
+L.marker([-543,-5758], {icon: systemIcon}).bindTooltip("Poja",{permanent: true}).addTo(map);
+L.marker([-595,-5766], {icon: systemIcon}).bindTooltip("Nidox",{permanent: true}).addTo(map);
+L.marker([-606,-5721], {icon: systemIcon}).bindTooltip("Lipas",{permanent: true}).addTo(map);
+//Dalfa
+L.marker([-440,-5694], {icon: systemIcon}).bindTooltip("Dalfa",{permanent: true}).addTo(map);
+L.marker([-391,-5743], {icon: systemIcon}).bindTooltip("Tohvus",{permanent: true}).addTo(map);
+L.marker([-426,-5756], {icon: systemIcon}).bindTooltip("Bo-Jeems",{permanent: true}).addTo(map);
+L.marker([-465,-5720], {icon: systemIcon}).bindTooltip("Zanti",{permanent: true}).addTo(map);
+//Follin
+L.marker([-416,-5640], {icon: systemIcon}).bindTooltip("Follin",{permanent: true}).addTo(map);
+L.marker([-372,-5664], {icon: systemIcon}).bindTooltip("Soeller",{permanent: true}).addTo(map);
+L.marker([-380,-5619], {icon: systemIcon}).bindTooltip("Barra",{permanent: true}).addTo(map);
+L.marker([-408,-5602], {icon: systemIcon}).bindTooltip("Corla",{permanent: true}).addTo(map);
+//Cospilon
+L.marker([-493,-5467], {icon: systemIcon}).bindTooltip("Cospilon",{permanent: true}).addTo(map);
+L.marker([-450,-5479], {icon: systemIcon}).bindTooltip("Doma",{permanent: true}).addTo(map);
+L.marker([-464,-5441], {icon: systemIcon}).bindTooltip("Heima",{permanent: true}).addTo(map);
+L.marker([-502,-5424], {icon: systemIcon}).bindTooltip("Halkon",{permanent: true}).addTo(map);
+//Groshi
+L.marker([-599,-5457], {icon: systemIcon}).bindTooltip("Groshi",{permanent: true}).addTo(map);
+L.marker([-570,-5451], {icon: systemIcon}).bindTooltip("Dovaler",{permanent: true}).addTo(map);
+L.marker([-612,-5417], {icon: systemIcon}).bindTooltip("Banks",{permanent: true}).addTo(map);
+L.marker([-632,-5470], {icon: systemIcon}).bindTooltip("Izbel",{permanent: true}).addTo(map);
+//Boru
+L.marker([-831,-5422], {icon: systemIcon}).bindTooltip("Boru",{permanent: true}).addTo(map);
+L.marker([-797,-5424], {icon: systemIcon}).bindTooltip("Eshu",{permanent: true}).addTo(map);
+L.marker([-824,-5455], {icon: systemIcon}).bindTooltip("Leza",{permanent: true}).addTo(map);
+L.marker([-857,-5435], {icon: systemIcon}).bindTooltip("Tapio",{permanent: true}).addTo(map);
+L.marker([-842,-5394], {icon: systemIcon}).bindTooltip("Kauko",{permanent: true}).addTo(map);
+L.marker([-810,-5390], {icon: systemIcon}).bindTooltip("Kibuka",{permanent: true}).addTo(map);
+L.marker([-797,-5403], {icon: systemIcon}).bindTooltip("Katonda",{permanent: true}).addTo(map);
+//Aodaan
+L.marker([-830,-5327], {icon: systemIcon}).bindTooltip("Aodaan",{permanent: true}).addTo(map);
+L.marker([-806,-5344], {icon: systemIcon}).bindTooltip("Duvlock",{permanent: true}).addTo(map);
+L.marker([-853,-5343], {icon: systemIcon}).bindTooltip("Ergantal",{permanent: true}).addTo(map);
+L.marker([-853,-5314], {icon: systemIcon}).bindTooltip("Boniv",{permanent: true}).addTo(map);
+L.marker([-807,-5309], {icon: systemIcon}).bindTooltip("Sual",{permanent: true}).addTo(map);
+//Suilneimhe
+L.marker([-971,-5317], {icon: systemIcon}).bindTooltip("Suilneimhe",{permanent: true}).addTo(map);
+L.marker([-954,-5337], {icon: systemIcon}).bindTooltip("Maglynn",{permanent: true}).addTo(map);
+L.marker([-989,-5324], {icon: systemIcon}).bindTooltip("Moston",{permanent: true}).addTo(map);
+L.marker([-980,-5294], {icon: systemIcon}).bindTooltip("Pyr",{permanent: true}).addTo(map);
+L.marker([-935,-5302], {icon: systemIcon}).bindTooltip("Bernin",{permanent: true}).addTo(map);
+//Aindia
+L.marker([-956,-5412], {icon: systemIcon}).bindTooltip("Aindia",{permanent: true}).addTo(map);
+L.marker([-930,-5426], {icon: systemIcon}).bindTooltip("Fiadh",{permanent: true}).addTo(map);
+L.marker([-965,-5441], {icon: systemIcon}).bindTooltip("Alonso",{permanent: true}).addTo(map);
+L.marker([-980,-5423], {icon: systemIcon}).bindTooltip("Mara Eya",{permanent: true}).addTo(map);
+L.marker([-976,-5401], {icon: systemIcon}).bindTooltip("Cosa",{permanent: true}).addTo(map);
+L.marker([-943,-5381], {icon: systemIcon}).bindTooltip("Ulzar",{permanent: true}).addTo(map);
+L.marker([-923,-5400], {icon: systemIcon}).bindTooltip("Mielikki",{permanent: true}).addTo(map);
+//Fithis
+L.marker([-1099,-5256], {icon: systemIcon}).bindTooltip("Fithis",{permanent: true}).addTo(map);
+L.marker([-1094,-5281], {icon: systemIcon}).bindTooltip("Cara Alpha",{permanent: true}).addTo(map);
+L.marker([-1117,-5246], {icon: systemIcon}).bindTooltip("Cara Beta",{permanent: true}).addTo(map);
+L.marker([-1076,-5225], {icon: systemIcon}).bindTooltip("Rosenburg",{permanent: true}).addTo(map);
+L.marker([-1046,-5252], {icon: systemIcon}).bindTooltip("Minnea",{permanent: true}).addTo(map);
+//Coth
+L.marker([-1189,-5345], {icon: systemIcon}).bindTooltip("Coth",{permanent: true}).addTo(map);
+L.marker([-1160,-5363], {icon: systemIcon}).bindTooltip("Veist",{permanent: true}).addTo(map);
+L.marker([-1189,-5373], {icon: systemIcon}).bindTooltip("Emola",{permanent: true}).addTo(map);
+L.marker([-1226,-5343], {icon: systemIcon}).bindTooltip("Kroci",{permanent: true}).addTo(map);
+L.marker([-1213,-5317], {icon: systemIcon}).bindTooltip("Fyufi",{permanent: true}).addTo(map);
+L.marker([-1192,-5308], {icon: systemIcon}).bindTooltip("Gurdy",{permanent: true}).addTo(map);
+L.marker([-1155,-5335], {icon: systemIcon}).bindTooltip("Wretsky",{permanent: true}).addTo(map);
+//Solusta
+L.marker([-1192,-5147], {icon: systemIcon}).bindTooltip("Solusta",{permanent: true}).addTo(map);
+L.marker([-1191,-5178], {icon: systemIcon}).bindTooltip("Iaswo",{permanent: true}).addTo(map);
+L.marker([-1215,-5170], {icon: systemIcon}).bindTooltip("Lyon",{permanent: true}).addTo(map);
+L.marker([-1251,-5155], {icon: systemIcon}).bindTooltip("Littledove",{permanent: true}).addTo(map);
+L.marker([-1215,-5128], {icon: systemIcon}).bindTooltip("Taleka",{permanent: true}).addTo(map);
+L.marker([-1196,-5113], {icon: systemIcon}).bindTooltip("Mesadin",{permanent: true}).addTo(map);
+L.marker([-1168,-5133], {icon: systemIcon}).bindTooltip("Istyna",{permanent: true}).addTo(map);
+//Rua
+L.marker([-1121,-5034], {icon: systemIcon}).bindTooltip("Rua",{permanent: true}).addTo(map);
+L.marker([-1086,-5037], {icon: systemIcon}).bindTooltip("Tova",{permanent: true}).addTo(map);
+L.marker([-1086,-5094], {icon: systemIcon}).bindTooltip("Zog",{permanent: true}).addTo(map);
+L.marker([-1155,-5047], {icon: systemIcon}).bindTooltip("Robesi",{permanent: true}).addTo(map);
+L.marker([-1117,-4999], {icon: systemIcon}).bindTooltip("Demavar",{permanent: true}).addTo(map);
 
 
 
