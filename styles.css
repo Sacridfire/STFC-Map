@@ -8,3 +8,8 @@
 .leaflet-marker-icon {
   display: none;
 }
+
+.leaflet-control-layers {
+  max-height: 600px;
+  overflow: auto;
+}

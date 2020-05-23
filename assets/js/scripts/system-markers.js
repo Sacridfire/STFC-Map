@@ -507,6 +507,8 @@ L.marker([-594,-4993], {icon: systemIcon}).bindTooltip("Xipox",{permanent: true}
 L.marker([-555,-4992], {icon: systemIcon}).bindTooltip("Qubas",{permanent: true}).addTo(map);
 L.marker([-533,-5024], {icon: systemIcon}).bindTooltip("Yosiqul",{permanent: true}).addTo(map);
 L.marker([-537,-5061], {icon: systemIcon}).bindTooltip("Benif",{permanent: true}).addTo(map);
+//Zone22
+//Midnight
 
 //L.marker([], {icon: systemIcon}).bindTooltip("",{permanent: true}).addTo(map);
 //Add each cluster to a group, add all individual systems to a group, add layer groups, add layer control
