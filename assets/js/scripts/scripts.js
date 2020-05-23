@@ -25,6 +25,18 @@
     }
     lastZoom = zoom;
   });
+  
+  var markerZoom;
+  var markerThreshold = 0;
+  map.on('zoomend', function() {
+    var zoom = map.getZoom();
+    if (zoom < markerThreshold && (!markerZoom || markerZoom >= markerThreshold)) {
+      $(".leaflet-marker-icon").css("display", "none")
+    } else if (zoom >= markerThreshold && (!markerZoom || markerZoom < markerThreshold)) {
+      $(".leaflet-marker-icon").css("display", "block")
+    }
+    lastZoom = zoom;
+  });
 
   // load Travel Paths
   var paths = null
