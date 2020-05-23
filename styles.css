@@ -5,3 +5,6 @@
 .leaflet-tooltip {
   display: none;
 }
+.leaflet-marker-icon {
+  display: none;
+}

@@ -55,7 +55,20 @@ L.marker([-1535,-4909], {icon: systemIcon}).bindTooltip("Landi",{permanent: true
 L.marker([-1426,-4861], {icon: systemIcon}).bindTooltip("Aoro",{permanent: true}).addTo(map);
 L.marker([-1425,-4683], {icon: systemIcon}).bindTooltip("Palimer",{permanent: true}).addTo(map);
 L.marker([-1335,-4963], {icon: systemIcon}).bindTooltip("Bohvanderro",{permanent: true}).addTo(map);
+L.marker([-601,-5238], {icon: systemIcon}).bindTooltip("Elva",{permanent: true}).addTo(map);
+L.marker([-549,-5139], {icon: systemIcon}).bindTooltip("Zehoro",{permanent: true}).addTo(map);
 //Clusters
+//Zone 11
+  var zone11Points = [
+	[-399,-4708],
+	[-425,-4734],
+	[-439,-4725],
+	[-550,-4785],
+	[-462,-4668],
+	[-455,-4650],
+	[-441,-4619],
+	[-430,-4632]];
+  var Zone11 = L.polygon(zone11Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Kepler-018
 L.marker([-426,-4679], {icon: systemIcon}).bindTooltip("Kepler-018",{permanent: true}).addTo(map);
 L.marker([-399,-4708], {icon: systemIcon}).bindTooltip("Wezen",{permanent: true}).addTo(map);
@@ -66,12 +79,17 @@ L.marker([-462,-4668], {icon: systemIcon}).bindTooltip("Eizeb",{permanent: true}
 L.marker([-455,-4650], {icon: systemIcon}).bindTooltip("Aciben",{permanent: true}).addTo(map);
 L.marker([-441,-4619], {icon: systemIcon}).bindTooltip("Bubeau",{permanent: true}).addTo(map);
 L.marker([-430,-4632], {icon: systemIcon}).bindTooltip("Eisenhorn",{permanent: true}).addTo(map);
-  var Kepler = L.circle([-426, -4679], {
-    color: 'gray',
-    fillColor: 'white',
-    fillOpacity: 0.5,
-    radius: 65
-});
+//Zone 10
+  var zone10Points = [
+    [-523,-4683],
+	[-536,-4702],
+	[-597,-4772],
+	[-682,-4773],
+	[-695,-4630],
+	[-643,-4714],
+	[-557,-4643],
+	[-535,-4647]];
+  var Zone10 = L.polygon(zone10Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Amador
 L.marker([-546,-4673], {icon: systemIcon}).bindTooltip("Amador",{permanent: true}).addTo(map);
 L.marker([-523,-4683], {icon: systemIcon}).bindTooltip("Rakkaus",{permanent: true}).addTo(map);
@@ -80,19 +98,32 @@ L.marker([-553,-4711], {icon: systemIcon}).bindTooltip("Laidcenn",{permanent: tr
 L.marker([-567,-4668], {icon: systemIcon}).bindTooltip("Ione",{permanent: true}).addTo(map);
 L.marker([-557,-4643], {icon: systemIcon}).bindTooltip("Araiza",{permanent: true}).addTo(map);
 L.marker([-535,-4647], {icon: systemIcon}).bindTooltip("H'ganrem",{permanent: true}).addTo(map);
-  var AmadorPoints = [
-    [-523,-4683],
-	[-536,-4702],
-	[-553,-4711],
-	[-567,-4668],
-	[-557,-4643],
-	[-535,-4647]];
-  var Amador = L.polygon(AmadorPoints, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
+//Zone 12
+  var zone12Points = [
+	[-483,-4412],
+	[-474,-4462],
+	[-470,-4518],
+	[-476,-4581],
+	[-500,-4560],
+	[-528,-4529],
+	[-539,-4497],
+	[-522,-4467]];
+  var Zone12 = L.polygon(zone12Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Willenia
 L.marker([-502,-4477], {icon: systemIcon}).bindTooltip("Willenia",{permanent: true}).addTo(map);
 L.marker([-474,-4462], {icon: systemIcon}).bindTooltip("Sayo",{permanent: true}).addTo(map);
 L.marker([-483,-4412], {icon: systemIcon}).bindTooltip("Redmond",{permanent: true}).addTo(map);
 L.marker([-522,-4467], {icon: systemIcon}).bindTooltip("Lahrel",{permanent: true}).addTo(map);
+//Zone 13
+  var zone13Points = [
+	[-572,-4600],
+	[-585,-4624],
+	[-604,-4662],
+	[-640,-4585],
+	[-577,-4533],
+	[-571,-4546],
+	[-567,-4566]];
+  var Zone13 = L.polygon(zone13Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Azha
 L.marker([-592,-4584], {icon: systemIcon}).bindTooltip("Azha",{permanent: true}).addTo(map);
 L.marker([-572,-4600], {icon: systemIcon}).bindTooltip("Kaus Borealis",{permanent: true}).addTo(map);
@@ -131,18 +162,12 @@ L.marker([-1339,-5957], {icon: systemIcon}).bindTooltip("Colt",{permanent: true}
 	[-1597,-5848]];
   var Zone2a = L.polygon(zone2aPoints, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
   var zone2bPoints = [
-	[-1464,-5915],
+	[-1455,-5893],
+	[-1477,-5826],
 	[-1597,-5848],
 	[-1305,-5536]];
   var Zone2b = L.polygon(zone2bPoints, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
-  var Tellun = L.circle([-1305,-5536], {
-    color: 'gray',
-    fillColor: 'white',
-    fillOpacity: 0.5,
-	radius: 35
-  });
-  var Zone2OptionA = L.layerGroup([Zone2a, Tellun]);
-  var Zone2OptionB = L.layerGroup([Zone2a, Zone2b]);
+  var Zone2 = L.layerGroup([Zone2a, Zone2b]);
 //Hroga
 L.marker([-1464,-5915], {icon: systemIcon}).bindTooltip("Hroga",{permanent: true}).addTo(map);
 L.marker([-1433,-5960], {icon: systemIcon}).bindTooltip("Yerma",{permanent: true}).addTo(map);
@@ -178,9 +203,8 @@ L.marker([-1503,-5528], {icon: systemIcon}).bindTooltip("Gomes",{permanent: true
 	[-802,-5856],
 	[-687,-5802],
 	[-657,-5838],
-	[-689,-5951],
-	[-729,-5987],
-	[-779,-5957]];
+	[-727,-6133],
+	[-854,-5935]];
   var Zone4 = L.polygon(zone4Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Mayagrazi
 L.marker([-696,-5834], {icon: systemIcon}).bindTooltip("Mayagrazi",{permanent: true}).addTo(map);
@@ -198,7 +222,8 @@ L.marker([-779,-5957], {icon: systemIcon}).bindTooltip("Sido",{permanent: true})
 	[-826,-6070],
 	[-863,-6101],
 	[-1035,-6108],
-	[-1049,-6010]];
+	[-1156,-6020],
+	[-1010,-5920]];
   var Zone5 = L.polygon(zone5Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Sverlov
 L.marker([-883,-6039], {icon: systemIcon}).bindTooltip("Sverlov",{permanent: true}).addTo(map);
@@ -217,7 +242,7 @@ L.marker([-1049,-6010], {icon: systemIcon}).bindTooltip("Lyquan",{permanent: tru
 	[-1136,-5829],
 	[-1107,-5691],
 	[-1068,-5649],
-	[-1044,-5684]];
+	[-918,-5579]];
   var Zone6 = L.polygon(zone6Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Falko
 L.marker([-1067,-5817], {icon: systemIcon}).bindTooltip("Falko",{permanent: true}).addTo(map);
@@ -231,7 +256,7 @@ L.marker([-1107,-5691], {icon: systemIcon}).bindTooltip("Jeybriol",{permanent: t
 L.marker([-1068,-5649], {icon: systemIcon}).bindTooltip("Donnel",{permanent: true}).addTo(map);
 //Zone 7
   var zone7Points = [
-	[-596,-5662],
+	[-612,-5573],
 	[-543,-5758],
 	[-595,-5766],
 	[-670,-5680],
@@ -250,8 +275,8 @@ L.marker([-606,-5721], {icon: systemIcon}).bindTooltip("Lipas",{permanent: true}
 //Zone 8
   var zone8Points = [
 	[-482,-5637],
-	[-465,-5720],
-	[-426,-5756],
+	[-527,-5692],
+	[-452,-5841],
 	[-391,-5743],
 	[-372,-5664],
 	[-380,-5619],
@@ -269,8 +294,8 @@ L.marker([-380,-5619], {icon: systemIcon}).bindTooltip("Barra",{permanent: true}
 L.marker([-408,-5602], {icon: systemIcon}).bindTooltip("Corla",{permanent: true}).addTo(map);
 //Zone 9
   var zone9Points = [
-	[-533,-5498],
-	[-450,-5479],
+	[-499,-5566],
+	[-345,-5562],
 	[-464,-5441],
 	[-502,-5424],
 	[-612,-5417],
@@ -286,7 +311,15 @@ L.marker([-599,-5457], {icon: systemIcon}).bindTooltip("Groshi",{permanent: true
 L.marker([-570,-5451], {icon: systemIcon}).bindTooltip("Dovaler",{permanent: true}).addTo(map);
 L.marker([-612,-5417], {icon: systemIcon}).bindTooltip("Banks",{permanent: true}).addTo(map);
 L.marker([-632,-5470], {icon: systemIcon}).bindTooltip("Izbel",{permanent: true}).addTo(map);
-//Zone10
+//Zone 14
+  var zone14Points = [
+	[-824,-5455],
+	[-857,-5435],
+	[-853,-5314],
+	[-807,-5309],
+	[-797,-5403],
+	[-797,-5424]];
+  var Zone14 = L.polygon(zone14Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Boru
 L.marker([-831,-5422], {icon: systemIcon}).bindTooltip("Boru",{permanent: true}).addTo(map);
 L.marker([-797,-5424], {icon: systemIcon}).bindTooltip("Eshu",{permanent: true}).addTo(map);
@@ -301,6 +334,16 @@ L.marker([-806,-5344], {icon: systemIcon}).bindTooltip("Duvlock",{permanent: tru
 L.marker([-853,-5343], {icon: systemIcon}).bindTooltip("Ergantal",{permanent: true}).addTo(map);
 L.marker([-853,-5314], {icon: systemIcon}).bindTooltip("Boniv",{permanent: true}).addTo(map);
 L.marker([-807,-5309], {icon: systemIcon}).bindTooltip("Sual",{permanent: true}).addTo(map);
+//Zone 15
+  var zone15Points = [
+	[-965,-5441],
+	[-980,-5423],
+	[-989,-5324],
+	[-980,-5294],
+	[-935,-5302],
+	[-923,-5400],
+	[-930,-5426]];
+  var Zone15 = L.polygon(zone15Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Suilneimhe
 L.marker([-971,-5317], {icon: systemIcon}).bindTooltip("Suilneimhe",{permanent: true}).addTo(map);
 L.marker([-954,-5337], {icon: systemIcon}).bindTooltip("Maglynn",{permanent: true}).addTo(map);
@@ -315,6 +358,16 @@ L.marker([-980,-5423], {icon: systemIcon}).bindTooltip("Mara Eya",{permanent: tr
 L.marker([-976,-5401], {icon: systemIcon}).bindTooltip("Cosa",{permanent: true}).addTo(map);
 L.marker([-943,-5381], {icon: systemIcon}).bindTooltip("Ulzar",{permanent: true}).addTo(map);
 L.marker([-923,-5400], {icon: systemIcon}).bindTooltip("Mielikki",{permanent: true}).addTo(map);
+//Zone 16
+  var zone16Points = [
+	[-1046,-5252],
+	[-1160,-5363],
+	[-1189,-5373],
+	[-1226,-5343],
+	[-1213,-5317],
+	[-1117,-5246],
+	[-1076,-5225]];
+  var Zone16 = L.polygon(zone16Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Fithis
 L.marker([-1099,-5256], {icon: systemIcon}).bindTooltip("Fithis",{permanent: true}).addTo(map);
 L.marker([-1094,-5281], {icon: systemIcon}).bindTooltip("Cara Alpha",{permanent: true}).addTo(map);
@@ -329,6 +382,16 @@ L.marker([-1226,-5343], {icon: systemIcon}).bindTooltip("Kroci",{permanent: true
 L.marker([-1213,-5317], {icon: systemIcon}).bindTooltip("Fyufi",{permanent: true}).addTo(map);
 L.marker([-1192,-5308], {icon: systemIcon}).bindTooltip("Gurdy",{permanent: true}).addTo(map);
 L.marker([-1155,-5335], {icon: systemIcon}).bindTooltip("Wretsky",{permanent: true}).addTo(map);
+//Zone 17
+  var zone17Points = [
+	[-1086,-5094],
+	[-1191,-5178],
+	[-1215,-5170],
+	[-1251,-5155],
+	[-1155,-5047],
+	[-1117,-4999],
+	[-1086,-5037]];
+  var Zone17 = L.polygon(zone17Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Solusta
 L.marker([-1192,-5147], {icon: systemIcon}).bindTooltip("Solusta",{permanent: true}).addTo(map);
 L.marker([-1191,-5178], {icon: systemIcon}).bindTooltip("Iaswo",{permanent: true}).addTo(map);
@@ -343,6 +406,14 @@ L.marker([-1086,-5037], {icon: systemIcon}).bindTooltip("Tova",{permanent: true}
 L.marker([-1086,-5094], {icon: systemIcon}).bindTooltip("Zog",{permanent: true}).addTo(map);
 L.marker([-1155,-5047], {icon: systemIcon}).bindTooltip("Robesi",{permanent: true}).addTo(map);
 L.marker([-1117,-4999], {icon: systemIcon}).bindTooltip("Demavar",{permanent: true}).addTo(map);
+//Zone 18
+  var zone18Points = [
+	[-1380,-5099],
+	[-1446,-5384],
+	[-1540,-5367],
+	[-1678,-5244],
+	[-1696,-5161]];
+  var Zone18 = L.polygon(zone18Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Dolcan
 L.marker([-1466,-5290], {icon: systemIcon}).bindTooltip("Dolcan",{permanent: true}).addTo(map);
 L.marker([-1446,-5384], {icon: systemIcon}).bindTooltip("Wokapa",{permanent: true}).addTo(map);
@@ -353,6 +424,15 @@ L.marker([-1635,-5220], {icon: systemIcon}).bindTooltip("Aetisan",{permanent: tr
 L.marker([-1678,-5244], {icon: systemIcon}).bindTooltip("Entrunar",{permanent: true}).addTo(map);
 L.marker([-1696,-5161], {icon: systemIcon}).bindTooltip("Agrico",{permanent: true}).addTo(map);
 L.marker([-1650,-5162], {icon: systemIcon}).bindTooltip("Odal",{permanent: true}).addTo(map);
+//Zone 19
+  var zone19Points = [
+	[-1535,-4909],
+	[-1584,-5093],
+	[-1793,-5076],
+	[-1680,-4822],
+	[-1595,-4675],
+	[-1527,-4713]];
+  var Zone19 = L.polygon(zone19Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Taoji
 L.marker([-1629,-4888], {icon: systemIcon}).bindTooltip("Taoji",{permanent: true}).addTo(map);
 L.marker([-1600,-4965], {icon: systemIcon}).bindTooltip("Resola",{permanent: true}).addTo(map);
@@ -363,6 +443,15 @@ L.marker([-1567,-4748], {icon: systemIcon}).bindTooltip("Vinmaier",{permanent: t
 L.marker([-1610,-4746], {icon: systemIcon}).bindTooltip("Poservoz",{permanent: true}).addTo(map);
 L.marker([-1595,-4675], {icon: systemIcon}).bindTooltip("Lunfa",{permanent: true}).addTo(map);
 L.marker([-1527,-4713], {icon: systemIcon}).bindTooltip("Nurt",{permanent: true}).addTo(map);
+//Zone 20
+  var zone20Points = [
+	[-1297,-5023],
+	[-1426,-4861],
+	[-1425,-4683],
+	[-1245,-4838],
+	[-1222,-4944],
+	[-1250,-5005]];
+  var Zone20 = L.polygon(zone20Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Mulk
 L.marker([-1297,-4875], {icon: systemIcon}).bindTooltip("Mulk",{permanent: true}).addTo(map);
 L.marker([-1333,-4832], {icon: systemIcon}).bindTooltip("Lockred",{permanent: true}).addTo(map);
@@ -373,6 +462,16 @@ L.marker([-1278,-4958], {icon: systemIcon}).bindTooltip("Panuq",{permanent: true
 L.marker([-1250,-5005], {icon: systemIcon}).bindTooltip("Hessen",{permanent: true}).addTo(map);
 L.marker([-1297,-5023], {icon: systemIcon}).bindTooltip("Kepp",{permanent: true}).addTo(map);
 L.marker([-1222,-4944], {icon: systemIcon}).bindTooltip("Pinikou",{permanent: true}).addTo(map);
+//Zone 21
+  var zone21Points = [
+	[-601,-5238],
+	[-644,-5297],
+	[-678,-5319],
+	[-717,-5320],
+	[-746,-5292],
+	[-681,-5149],
+	[-645,-5160]];
+  var Zone21 = L.polygon(zone21Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Donfo
 L.marker([-689,-5269], {icon: systemIcon}).bindTooltip("Donfo",{permanent: true}).addTo(map);
 L.marker([-644,-5297], {icon: systemIcon}).bindTooltip("Ellijo",{permanent: true}).addTo(map);
@@ -385,7 +484,29 @@ L.marker([-634,-5196], {icon: systemIcon}).bindTooltip("Ethjamar",{permanent: tr
 L.marker([-645,-5160], {icon: systemIcon}).bindTooltip("Aum",{permanent: true}).addTo(map);
 L.marker([-681,-5149], {icon: systemIcon}).bindTooltip("Bulut",{permanent: true}).addTo(map);
 L.marker([-703,-5207], {icon: systemIcon}).bindTooltip("Somaochu",{permanent: true}).addTo(map);
-
+//Zone 22
+  var zone22Points = [
+	[-549,-5139],
+	[-655,-5118],
+	[-685,-5094],
+	[-689,-5054],
+	[-594,-4993],
+	[-555,-4992],
+	[-533,-5024],
+	[-537,-5061]];
+  var Zone22 = L.polygon(zone22Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
+//Utoqa
+L.marker([-629,-5072], {icon: systemIcon}).bindTooltip("Utoqa",{permanent: true}).addTo(map);
+L.marker([-614,-5123], {icon: systemIcon}).bindTooltip("Suqigor",{permanent: true}).addTo(map);
+L.marker([-655,-5118], {icon: systemIcon}).bindTooltip("Ceguh",{permanent: true}).addTo(map);
+L.marker([-685,-5094], {icon: systemIcon}).bindTooltip("Uuuuhai",{permanent: true}).addTo(map);
+L.marker([-689,-5054], {icon: systemIcon}).bindTooltip("Nooia",{permanent: true}).addTo(map);
+//Nilkino
+L.marker([-579,-5031], {icon: systemIcon}).bindTooltip("Nilkino",{permanent: true}).addTo(map);
+L.marker([-594,-4993], {icon: systemIcon}).bindTooltip("Xipox",{permanent: true}).addTo(map);
+L.marker([-555,-4992], {icon: systemIcon}).bindTooltip("Qubas",{permanent: true}).addTo(map);
+L.marker([-533,-5024], {icon: systemIcon}).bindTooltip("Yosiqul",{permanent: true}).addTo(map);
+L.marker([-537,-5061], {icon: systemIcon}).bindTooltip("Benif",{permanent: true}).addTo(map);
 
 //L.marker([], {icon: systemIcon}).bindTooltip("",{permanent: true}).addTo(map);
 //Add each cluster to a group, add all individual systems to a group, add layer groups, add layer control
