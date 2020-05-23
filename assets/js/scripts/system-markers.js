@@ -105,11 +105,12 @@ L.marker([-571,-4546], {icon: systemIcon}).bindTooltip("Wasat",{permanent: true}
 L.marker([-567,-4566], {icon: systemIcon}).bindTooltip("Kaus Media",{permanent: true}).addTo(map);
 //Zone 1
   var zone1Points = [
-    [-1214,-5682],
-	[-1344,-5760],
-	[-1339,-5957],
+    [-1344,-5760],
+	[-1214,-5682],
+	[-1200,-5772],
 	[-1293,-5978],
-	[-1200,-5772]];
+	[-1372,-6144],
+	[-1392,-5831]];
   var Zone1 = L.polygon(zone1Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
 //Wagirur
 L.marker([-1234,-5735], {icon: systemIcon}).bindTooltip("Wagirur",{permanent: true}).addTo(map);
@@ -122,13 +123,26 @@ L.marker([-1274,-5895], {icon: systemIcon}).bindTooltip("Dauan",{permanent: true
 L.marker([-1293,-5978], {icon: systemIcon}).bindTooltip("Junid",{permanent: true}).addTo(map);
 L.marker([-1339,-5957], {icon: systemIcon}).bindTooltip("Colt",{permanent: true}).addTo(map);
 //Zone 2
-  var zone2Points = [
+  var zone2aPoints = [
     [-1477,-5826],
 	[-1433,-5960],
 	[-1463,-6051],
 	[-1569,-5918],
 	[-1597,-5848]];
-  var Zone2 = L.polygon(zone2Points, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
+  var Zone2a = L.polygon(zone2aPoints, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
+  var zone2bPoints = [
+	[-1464,-5915],
+	[-1597,-5848],
+	[-1305,-5536]];
+  var Zone2b = L.polygon(zone2bPoints, {color: 'gray', fillColor: 'white', fillOpacity: '0.5'});
+  var Tellun = L.circle([-1305,-5536], {
+    color: 'gray',
+    fillColor: 'white',
+    fillOpacity: 0.5,
+	radius: 35
+  });
+  var Zone2OptionA = L.layerGroup([Zone2a, Tellun]);
+  var Zone2OptionB = L.layerGroup([Zone2a, Zone2b]);
 //Hroga
 L.marker([-1464,-5915], {icon: systemIcon}).bindTooltip("Hroga",{permanent: true}).addTo(map);
 L.marker([-1433,-5960], {icon: systemIcon}).bindTooltip("Yerma",{permanent: true}).addTo(map);
@@ -142,7 +156,8 @@ L.marker([-1597,-5848], {icon: systemIcon}).bindTooltip("Injerra",{permanent: tr
 //Zone 3
   var zone3Points = [
 	[-1506,-5621],
-	[-1643,-5713],
+	[-1544,-5718],
+	[-1729,-5889],
 	[-1689,-5638],
 	[-1620,-5518],
 	[-1556,-5518],
@@ -271,6 +286,7 @@ L.marker([-599,-5457], {icon: systemIcon}).bindTooltip("Groshi",{permanent: true
 L.marker([-570,-5451], {icon: systemIcon}).bindTooltip("Dovaler",{permanent: true}).addTo(map);
 L.marker([-612,-5417], {icon: systemIcon}).bindTooltip("Banks",{permanent: true}).addTo(map);
 L.marker([-632,-5470], {icon: systemIcon}).bindTooltip("Izbel",{permanent: true}).addTo(map);
+//Zone10
 //Boru
 L.marker([-831,-5422], {icon: systemIcon}).bindTooltip("Boru",{permanent: true}).addTo(map);
 L.marker([-797,-5424], {icon: systemIcon}).bindTooltip("Eshu",{permanent: true}).addTo(map);

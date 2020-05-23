@@ -95,9 +95,9 @@
     aug = L.geoJson(data, {
       style: function(feature) {
         return {
-          color: "yellow",
+          color: "orange",
           weight: 1,
-          fillColor: "yellow",
+          fillColor: "orange",
           fillOpacity: .5
         }
       },
