@@ -657,5 +657,7 @@ L.marker([-777,-4651], {icon: systemIcon}).bindTooltip("Zozalin",{permanent: tru
 L.marker([-755,-4690], {icon: systemIcon}).bindTooltip("Lodum",{permanent: true}).addTo(map);
 L.marker([-809,-4732], {icon: systemIcon}).bindTooltip("Vogum",{permanent: true}).addTo(map);
 
+var NeutralSpace = L.layerGroup([Zone1, Zone2, Zone3, Zone4, Zone5, Zone6, Zone7, Zone8, Zone9, Zone10, Zone11, Zone12, Zone13, Zone14, Zone15, Zone16, Zone17, Zone18, Zone19, Zone20, Zone21, Zone22, Zone23, Zone24, Zone25, Zone26, Zone27, Zone28, Zone29]);
+
 //L.marker([], {icon: systemIcon}).bindTooltip("",{permanent: true}).addTo(map);
 //Add each cluster to a group, add all individual systems to a group, add layer groups, add layer control
