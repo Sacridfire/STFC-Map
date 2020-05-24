@@ -23,6 +23,13 @@
 	'Zone 19': Zone19,
 	'Zone 20': Zone20,
 	'Zone 21': Zone21,
-	'Zone 22': Zone22
+	'Zone 22': Zone22,
+	'Zone 23': Zone23,
+	'Zone 24': Zone24,
+	'Zone 25': Zone25,
+	'Zone 26': Zone26,
+	'Zone 27': Zone27,
+	'Zone 28': Zone28,
+	'Zone 29': Zone29
   };
   var controlLayers = L.control.layers(null, overlays).addTo(map);
