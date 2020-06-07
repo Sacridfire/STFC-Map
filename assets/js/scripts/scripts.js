@@ -4,7 +4,7 @@
   var map = L.map('map', {
     crs: L.CRS.Simple,
     center: [-4679, -426],
-    minZoom: -2,
+    minZoom: -4,
     maxZoom: 10
   });
   var bounds = [

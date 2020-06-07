@@ -3,6 +3,7 @@
   };
   var overlays = {
 	'All Neutral Space': NeutralSpace,
+	'All Klingon Space': KlingonSpace,
 	'Zone 1': Zone1,
 	'Zone 2': Zone2,
 	'Zone 3': Zone3,
@@ -31,6 +32,9 @@
 	'Zone 26': Zone26,
 	'Zone 27': Zone27,
 	'Zone 28': Zone28,
-	'Zone 29': Zone29
+	'Zone 29': Zone29,
+	'Zone K1': ZoneK1,
+	'Zone K2': ZoneK2,
+	'Zone K4': ZoneK4
   };
   var controlLayers = L.control.layers(null, overlays).addTo(map);
